@@ -1,0 +1,25 @@
+{
+  "name": "flavorfolio",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "flavorfolio"
+  },
+  "keywords": [
+    "recipes",
+    "website"
+  ],
+  "author": "Andre Oliveira",
+  "license": "ISC",
+  "dependencies": {
+    "parcel": "^2.9.3"
+  },
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.9.3"
+  }
+}
