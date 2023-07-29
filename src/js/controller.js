@@ -1,11 +1,17 @@
 import * as model from './model.js';
 import recipeView from './views/recipeView.js';
 import SearchView from './views/searchView.js';
+import ResultsView from './views/resultsView.js';
+
 import { getJSON } from './helpers.js';
 
 import 'core-js/stable';
 import 'regenerator-runtime/runtime';
 import searchView from './views/searchView.js';
+
+if (module.hot) {
+  module.hot.accept();
+}
 
 const controlRecipes = async function () {
   try {
@@ -29,12 +35,13 @@ const controlSearchResults = async function () {
     // get search query
     const query = searchView.getQuery();
     if (!query) return;
+    resultsView.renderSpinner();
 
     // load search results
-    await model.loadSearchResults('pizza');
+    await model.loadSearchResults(query);
 
     // render results
-    console.log(model.state.search.results);
+    resultsView.render(model.state.search.results);
   } catch (err) {
     console.log(err);
   }
@@ -44,4 +51,5 @@ const init = function () {
   recipeView.addHandlerRender(controlRecipes);
   searchView.addHandlerSearch(controlSearchResults);
 };
+
 init();
