@@ -17,9 +17,12 @@
   "author": "Andre Oliveira",
   "license": "ISC",
   "dependencies": {
-    "parcel": "^2.9.3"
+    "core-js": "^3.32.0",
+    "parcel": "^2.9.3",
+    "regenerator-runtime": "^0.13.11"
   },
   "devDependencies": {
-    "@parcel/transformer-sass": "^2.9.3"
+    "@parcel/transformer-sass": "^2.9.3",
+    "process": "^0.11.10"
   }
 }
