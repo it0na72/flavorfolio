@@ -54,3 +54,6 @@ const init = function () {
 };
 
 init();
+
+// test comment
+// another test comment
