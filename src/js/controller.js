@@ -62,7 +62,3 @@ const init = function () {
 };
 
 init();
-
-// test comment
-// another test comment
-// one more test comment
