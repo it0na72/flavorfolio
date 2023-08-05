@@ -62,3 +62,5 @@ const init = function () {
 };
 
 init();
+
+// i cant solve this issue and im going crazy
