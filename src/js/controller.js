@@ -51,8 +51,12 @@ const controlSearchResults = async function () {
   }
 };
 
-const controlPaginatiopn = function () {
-  console.log('Pag controller');
+const controlPaginatiopn = function (goToPage) {
+  // render NEW results
+  resultsView.render(model.getSearchResultsPAge(goToPage));
+
+  // render NEW pagination buttons
+  paginationView.render(model.state.search);
 };
 
 const init = function () {
