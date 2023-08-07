@@ -25,6 +25,8 @@ const controlRecipes = async function () {
 
     // rendering recipe
     recipeView.render(model.state.recipe);
+
+    controlServings();
   } catch (err) {
     recipeView.renderError();
   }
@@ -59,6 +61,14 @@ const controlPaginatiopn = function (goToPage) {
   paginationView.render(model.state.search);
 };
 
+const controlServings = function () {
+  // update the recipe servings (in state)
+  model.updateServings(6);
+
+  // update the recipe view
+  recipeView.render(model.state.recipe);
+};
+
 const init = function () {
   recipeView.addHandlerRender(controlRecipes);
   searchView.addHandlerSearch(controlSearchResults);
@@ -66,5 +76,3 @@ const init = function () {
 };
 
 init();
-
-// i cant solve this issue and im going crazy
