@@ -76,3 +76,5 @@ const init = function () {
 };
 
 init();
+
+// SLOWLY UPDATING THE SERVINGS OF THE RECIPES
