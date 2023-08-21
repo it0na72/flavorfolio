@@ -30,4 +30,3 @@ class ResultsView extends View {
 export default new ResultsView();
 
 // test commit
-// one more test commit
