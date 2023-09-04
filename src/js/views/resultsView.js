@@ -29,5 +29,4 @@ class ResultsView extends View {
 
 export default new ResultsView();
 
-// test commit
-// mais um test commit
+// talvez seja desta vez q eu mude finalmente o projecto e acabo o curso, n consigo resolver isto
