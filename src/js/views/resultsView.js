@@ -28,6 +28,3 @@ class ResultsView extends View {
 }
 
 export default new ResultsView();
-
-// talvez seja desta vez q eu mude finalmente o projecto e acabo o curso, n consigo resolver isto
-// ainda n consigo e n sei o que ta errado aqui

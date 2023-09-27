@@ -129,5 +129,3 @@ class RecipeView extends View {
 }
 
 export default new RecipeView();
-
-// onem moresd test commit
