@@ -1,15 +1,16 @@
 import View from './View.js';
 
-import icons from 'url:../../img/icons.svg';
+// import icons from '../img/icons.svg'; // Parcel 1
+import icons from 'url:../../img/icons.svg'; // Parcel 2
 import { Fraction } from 'fractional';
 
 class RecipeView extends View {
   _parentElement = document.querySelector('.recipe');
   _errorMessage = `We can't find that recipe 😢 Please try another one!`;
-  _message = ``;
+  _message = '';
 
   addHandlerRender(handler) {
-    ['hashchange'].forEach(ev => window.addEventListener(ev, handler));
+    ['hashchange', 'load'].forEach(ev => window.addEventListener(ev, handler));
   }
 
   addHandlerUpdateServings(handler) {
@@ -69,7 +70,7 @@ class RecipeView extends View {
             </button>
             <button class="btn--tiny btn--update-servings" data-update-to="${
               this._data.servings + 1
-            }>
+            }">
               <svg>
                 <use href="${icons}#icon-plus-circle"></use>
               </svg>
@@ -77,7 +78,7 @@ class RecipeView extends View {
           </div>
         </div>
 
-        <div class="recipe__user-generated ${this._data.key ? '' : hidden}">
+        <div class="recipe__user-generated ${this._data.key ? '' : 'hidden'}">
           <svg>
             <use href="${icons}#icon-user"></use>
           </svg>
@@ -94,9 +95,7 @@ class RecipeView extends View {
       <div class="recipe__ingredients">
         <h2 class="heading--2">Recipe ingredients</h2>
         <ul class="recipe__ingredient-list">
-          ${this._data.ingredients
-            .map(this._generateMarkupIngredient)
-            .join('')}</ul>
+          ${this._data.ingredients.map(this._generateMarkupIngredient).join('')}
       </div>
 
       <div class="recipe__directions">
@@ -118,13 +117,13 @@ class RecipeView extends View {
             <use href="${icons}#icon-arrow-right"></use>
           </svg>
         </a>
-      </div>`;
+      </div>
+    `;
   }
 
   _generateMarkupIngredient(ing) {
-    ing => {
-      return `
-      <li class="recipe__ingredient">
+    return `
+    <li class="recipe__ingredient">
       <svg class="recipe__icon">
         <use href="${icons}#icon-check"></use>
       </svg>
@@ -135,8 +134,8 @@ class RecipeView extends View {
         <span class="recipe__unit">${ing.unit}</span>
         ${ing.description}
       </div>
-    </li>`;
-    };
+    </li>
+  `;
   }
 }
 

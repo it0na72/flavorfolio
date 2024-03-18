@@ -1,4 +1,5 @@
-import icons from 'url:../../img/icons.svg';
+import icons from 'url:../../img/icons.svg'; // Parcel 2
+
 export default class View {
   _data;
 
@@ -9,7 +10,7 @@ export default class View {
     this._data = data;
     const markup = this._generateMarkup();
 
-    if(!render) return markup;
+    if (!render) return markup;
 
     this._clear();
     this._parentElement.insertAdjacentHTML('afterbegin', markup);
@@ -20,23 +21,27 @@ export default class View {
     const newMarkup = this._generateMarkup();
 
     const newDOM = document.createRange().createContextualFragment(newMarkup);
-    const newElements = Array.from(newDom.querySelectorAll('*'));
+    const newElements = Array.from(newDOM.querySelectorAll('*'));
     const curElements = Array.from(this._parentElement.querySelectorAll('*'));
+
+    newElements.forEach((newEl, i) => {
+      const curEl = curElements[i];
+
+      // Updates changed TEXT
+      if (
+        !newEl.isEqualNode(curEl) &&
+        newEl.firstChild?.nodeValue.trim() !== ''
+      ) {
+        curEl.textContent = newEl.textContent;
+      }
+
+      // Updates changed ATTRIBUES
+      if (!newEl.isEqualNode(curEl))
+        Array.from(newEl.attributes).forEach(attr =>
+          curEl.setAttribute(attr.name, attr.value)
+        );
+    });
   }
-
-  newElements.forEach((newEl, i) => {
-    const curEl = curElements [i];
-
-    // updates changed text
-    if(!newEl.isEqualNode(curEl) && newEl.firstChild?.nodeValue.trim() !== '') 
-    {
-      curEl.textContent = newEl.textContent;
-    }
-
-    if (!newEl.isEqualNode(curEl))
-      Array.from(newEl.attributes).forEach(attr => curEl.setAttribute(attr.name, attr.value))
-  });
-}
 
   _clear() {
     this._parentElement.innerHTML = '';
@@ -44,43 +49,42 @@ export default class View {
 
   renderSpinner() {
     const markup = `
-            <div class="spinner">
-                <svg>
-              <use href="${icons}#icon-loader"></use>
-                </svg>
-             </div>`;
+      <div class="spinner">
+        <svg>
+          <use href="${icons}#icon-loader"></use>
+        </svg>
+      </div>
+    `;
     this._clear();
     this._parentElement.insertAdjacentHTML('afterbegin', markup);
   }
 
   renderError(message = this._errorMessage) {
     const markup = `
-    <div class="error">
-            <div>
-              <svg>
-                <use href="${icons}#icon-alert-triangle"></use>
-              </svg>
-            </div>
-            <p>${message}</p>
-          </div>
-          `;
-
+      <div class="error">
+        <div>
+          <svg>
+            <use href="${icons}#icon-alert-triangle"></use>
+          </svg>
+        </div>
+        <p>${message}</p>
+      </div>
+    `;
     this._clear();
     this._parentElement.insertAdjacentHTML('afterbegin', markup);
   }
 
   renderMessage(message = this._message) {
     const markup = `
-    <div class="message">
-            <div>
-              <svg>
-                <use href="${icons}#icon-smile"></use>
-              </svg>
-            </div>
-            <p>${message}</p>
-          </div>
-          `;
-
+      <div class="message">
+        <div>
+          <svg>
+            <use href="${icons}#icon-smile"></use>
+          </svg>
+        </div>
+        <p>${message}</p>
+      </div>
+    `;
     this._clear();
     this._parentElement.insertAdjacentHTML('afterbegin', markup);
   }
