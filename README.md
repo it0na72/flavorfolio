@@ -1,6 +1,6 @@
 <div align="center">
   <a href="https://github.com/it0na72/flavorfolio/">
-    <img src="/src/img/favicon.gif" alt="Logo" height="60">
+    <img src="/src/img/favicon.gif" alt="Logo" height="80">
   </a>
 <h3 align="center">Flavorfolio</h3>
 
