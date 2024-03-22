@@ -5,7 +5,7 @@
 <h3 align="center">Flavorfolio</h3>
 
   <p align="center">
-    <a href="https://github.com/it0na72/flavorfolio"><b>View Demo</b></a>
+    <a href="https://flavorfolio-ruby.vercel.app/"><b>View Demo</b></a>
     ·
     <a href="https://github.com/it0na72/flavorfolio/issue">Report Bug</a>
     ·
