@@ -61,11 +61,11 @@ After cloning this repo you should be able to change your details as needed.
 - [x] Change colour pallet & improve logo
 - [ ] Make website responsive with media queries
 - [x] Fix loading recipes from API
-- [x] Implementing search results
-- [x] Implementing pagination
-- [x] Implementing bookmarks
+- [x] Implement search results
+- [x] Implement pagination
+- [x] Implement bookmarks
 - [x] Storing bookmarks with localStorage
-- [x] Updating recipe servings
+- [x] Update recipe servings
 - [x] Add error and success messages
 
 See the [open issues](https://github.com/it0na72/flavorfolio-website/issue) for a full list of proposed features (and known issues).
