@@ -33,7 +33,7 @@
 
 ## About The Project
 
-![Flavorfolio](<img src="/src/img/flavorfolio.gif>)
+![Flavorfolio](https://github.com/it0na72/flavorfolio/assets/56265972/9253172d-4300-45f0-86b4-03cbd00b1283)
 
 Flavorfolio is your culinary companion, a meticulously crafted recipe search engine designed to elevate your cooking experience. Flavorfolio offers a seamless and intuitive interface that simplifies the quest for the perfect recipe.
 
