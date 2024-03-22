@@ -1,6 +1,6 @@
 <div align="center">
   <a href="https://github.com/it0na72/flavorfolio/">
-    <img src="img/favicon.gif" alt="Logo" height="60">
+    <img src="/src/img/favicon.gif" alt="Logo" height="60">
   </a>
 <h3 align="center">Flavorfolio</h3>
 
@@ -33,7 +33,7 @@
 
 ## About The Project
 
-![Flavorfolio](img/flavorfolio.gif)
+![Flavorfolio](<img src="img/flavorfolio.gif>)
 
 Flavorfolio is your culinary companion, a meticulously crafted recipe search engine designed to elevate your cooking experience. Flavorfolio offers a seamless and intuitive interface that simplifies the quest for the perfect recipe.
 
