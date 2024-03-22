@@ -61,6 +61,7 @@ After cloning this repo you should be able to change your details as needed.
 - [x] Change colour pallet & improve logo
 - [ ] Make website responsive with media queries
 - [x] Fix loading recipes from API
+- [ ] Fix recipes page when clicked, currently only displays an error when clicked
 - [x] Implement search results
 - [x] Implement pagination
 - [x] Implement bookmarks
