@@ -52,7 +52,10 @@ To get a local copy up and running follow these simple example steps.
 - Clone this repo
   `git clone https://github.com/it0na72/flavorfolio.git`
 
-After cloning this repo you should be able to change your details as needed.
+- Keeping in mind Node is installed in your environment run `$ npm install`
+- If any errors arise refer [here](https://docs.npmjs.com/cli/v10/commands/npm-install)
+- If no errors arise, run `$ npm run build`
+- Then, run `$ npm start`
 
 <!-- ROADMAP -->
 
@@ -61,7 +64,7 @@ After cloning this repo you should be able to change your details as needed.
 - [x] Change colour pallet & improve logo
 - [ ] Make website responsive with media queries
 - [x] Fix loading recipes from API
-- [ ] Fix recipes page when clicked, currently only displays an error when clicked
+- [x] Fix recipes page when clicked, currently only displays an error when clicked
 - [x] Implement search results
 - [x] Implement pagination
 - [x] Implement bookmarks
