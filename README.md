@@ -63,6 +63,7 @@ To get a local copy up and running follow these simple example steps.
 
 - [x] Change colour pallet & improve logo
 - [ ] Make website responsive with media queries
+- [ ] Add a go to 1st page button on the logo
 - [x] Fix loading recipes from API
 - [x] Fix recipes page when clicked, currently only displays an error when clicked
 - [x] Implement search results
